@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Licornes.com - Location de Licornes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        header {
+            background-color: #ff69b4;
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+        }
+        nav {
+            background-color: #ff1493;
+            padding: 1em;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 1em;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .content {
+            padding: 2em;
+        }
+        .tab {
+            display: none;
+        }
+        .tab.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Licornes.com</h1>
+        <p>Spécialiste de la location de licornes</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#services" onclick="showTab('services')">Nos Services</a></li>
+            <li><a href="#tarifs" onclick="showTab('tarifs')">Nos Tarifs</a></li>
+            <li><a href="#contact" onclick="showTab('contact')">Nous Contacter</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <div id="services" class="tab active">
+            <h2>Nos Services</h2>
+            <p>Découvrez nos différents services de location de licornes pour toutes occasions: fêtes, mariages, événements spéciaux et plus encore.</p>
+        </div>
+        <div id="tarifs" class="tab">
+            <h2>Nos Tarifs</h2>
+            <p>Consultez nos tarifs compétitifs pour la location de licornes. Nous proposons des options pour tous les budgets.</p>
+        </div>
+        <div id="contact" class="tab">
+            <h2>Nous Contacter</h2>
+            <p>Pour toute question ou réservation, veuillez nous contacter via le formulaire suivant ou par téléphone.</p>
+        </div>
+    </div>
+
+    <script>
+        function showTab(tabId) {
+            var tabs = document.querySelectorAll('.tab');
+            tabs.forEach(function(tab) {
+                tab.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
